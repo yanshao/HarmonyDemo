@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "entry_ListAbility",
+      "value": "entry_ListAbility"
+    },
+    {
+      "name": "listability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "listability_HelloWorld",
+      "value": "你好，世界"
+    }
+  ]
+}

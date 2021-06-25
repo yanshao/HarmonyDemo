@@ -1,26 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DependentLayout
+<DirectionalLayout
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
-    ohos:orientation="vertical"
+    ohos:alignment="horizontal_center"
     ohos:background_element="$color:background_color"
+    ohos:orientation="vertical"
     >
 
-    <ListContainer
-        ohos:id="$+id:mListContainer"
-        ohos:height="match_parent"
-        ohos:width="match_parent"
-        ohos:layout_alignment="horizontal_center"
+    <Button
+        ohos:id="$+id:list_btn"
+        ohos:height="50vp"
+        ohos:width="100vp"
+        ohos:background_element="$graphic:button_bg_blue"
+        ohos:text="list页面"
+        ohos:text_size="20vp"
+        ohos:top_margin="20px"
         />
+
     <Button
         ohos:id="$+id:camera_btn"
         ohos:height="50vp"
         ohos:width="100vp"
-        ohos:text="拍照"
+        ohos:background_element="$graphic:button_bg_blue"
+        ohos:text="相机"
         ohos:text_size="20vp"
         ohos:top_margin="20px"
+        />
+    <Button
+        ohos:id="$+id:dialog_btn"
+        ohos:height="50vp"
+        ohos:width="match_content"
         ohos:background_element="$graphic:button_bg_blue"
+        ohos:text="自定义dialog"
+        ohos:text_size="20vp"
+        ohos:top_margin="20px"
+        ohos:left_padding="10vp"
+        ohos:right_padding="10vp"
         />
 
-</DependentLayout>
+    <Button
+        ohos:id="$+id:click_btn"
+        ohos:height="50vp"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:button_bg_blue"
+        ohos:text="代码设置点击效果"
+        ohos:text_size="20vp"
+        ohos:top_margin="20px"
+        ohos:left_padding="10vp"
+        ohos:right_padding="10vp"
+        />
+</DirectionalLayout>

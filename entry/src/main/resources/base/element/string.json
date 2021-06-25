@@ -31,6 +31,18 @@
     {
       "name": "dialog_content",
       "value": "这是一个自定义dialog。"
+    },
+    {
+      "name": "listability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "listability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_ListAbility",
+      "value": "entry_ListAbility"
     }
   ]
 }

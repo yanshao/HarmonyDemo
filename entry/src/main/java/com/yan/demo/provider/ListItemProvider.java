@@ -2,8 +2,7 @@ package com.yan.demo.provider;
 
 import com.yan.demo.ResourceTable;
 import com.yan.demo.bean.ListBean;
-import com.yan.demo.slice.MainAbilitySlice;
-import ohos.aafwk.ability.AbilitySlice;
+import com.yan.demo.slice.ListAbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.aafwk.content.IntentParams;
 import ohos.aafwk.content.Operation;
@@ -11,14 +10,14 @@ import ohos.agp.components.*;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
-import java.security.Policy;
 import java.util.List;
 
 public class ListItemProvider extends BaseItemProvider {
     private List<ListBean> mListBean;
-    private MainAbilitySlice mSlice;
+    private ListAbilitySlice mSlice;
     private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00202, "ListItemProvider");
-    public ListItemProvider(MainAbilitySlice slice, List<ListBean> listBean) {
+
+    public ListItemProvider(ListAbilitySlice slice, List<ListBean> listBean) {
         this.mSlice = slice;
         this.mListBean = listBean;
 
@@ -55,18 +54,18 @@ public class ListItemProvider extends BaseItemProvider {
         Text name = (Text) cpt.findComponentById(ResourceTable.Id_name_text);
         name.setText(sampleItem.getName());
         Text age = (Text) cpt.findComponentById(ResourceTable.Id_age_text);
-        age.setText(sampleItem.getAge()+"");
-        DirectionalLayout item_layout= (DirectionalLayout) cpt.findComponentById(ResourceTable.Id_item_layout);
+        age.setText(sampleItem.getAge() + "");
+        DirectionalLayout item_layout = (DirectionalLayout) cpt.findComponentById(ResourceTable.Id_item_layout);
         item_layout.setClickedListener(component -> {
             Intent intent = new Intent();
             Operation operation = new Intent.OperationBuilder()
                     .withAction("action.intent.INFO")
                     .build();
-            IntentParams intentParams=new IntentParams();
-            intentParams.setParam("key",sampleItem.getName());
+            IntentParams intentParams = new IntentParams();
+            intentParams.setParam("key", sampleItem.getName());
             intent.setOperation(operation);
             intent.setParams(intentParams);
-            mSlice.startAbilityForResult(intent,2001);
+            mSlice.startAbilityForResult(intent, 2001);
         });
         return cpt;
     }

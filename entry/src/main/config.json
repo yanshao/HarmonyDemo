@@ -112,6 +112,22 @@
         "type": "service",
         "launchType": "standard",
         "visible": true
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.yan.demo.ListAbility",
+        "icon": "$media:icon",
+        "description": "$string:listability_description",
+        "label": "$string:entry_ListAbility",
+        "type": "page",
+        "launchType": "standard",
+        "skills": [
+          {
+            "actions": [
+              "action.intent.List"
+            ]
+          }
+        ]
       }
     ]
   }
