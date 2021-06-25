@@ -7,6 +7,7 @@ import ohos.aafwk.content.IntentParams;
 import ohos.aafwk.content.Operation;
 import ohos.agp.components.Button;
 import ohos.agp.components.Component;
+import ohos.agp.components.Text;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
@@ -22,7 +23,9 @@ public class InfoAbilitySlice extends AbilitySlice {
         HiLog.error(LABEL, "onStart");
         intentParams = intent.getParams();
         String zz = (String) intentParams.getParam("key");
-        HiLog.error(LABEL, "zz:%{public}s,s", zz);
+        HiLog.error(LABEL, "zz:%{public}s", zz);
+       Text text= (Text) findComponentById(ResourceTable.Id_text_helloworld);
+        text.setText(zz);
         back_btn = (Button) findComponentById(ResourceTable.Id_back_btn);
         back_btn.setClickedListener(new Component.ClickedListener() {
             @Override

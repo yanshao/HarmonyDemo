@@ -55,7 +55,7 @@ import static ohos.media.camera.device.Camera.FrameConfigType.FRAME_CONFIG_PICTU
 import static ohos.media.camera.device.Camera.FrameConfigType.FRAME_CONFIG_PREVIEW;
 
 public class CameraAbilitySlice extends AbilitySlice {
-    private static final HiLogLabel TAG = new HiLogLabel(3, 0xD001100, "MainAbilitySlice");
+    private static final HiLogLabel TAG = new HiLogLabel(3, 0xD001100, "CameraAbilitySlice");
 
     private static final int EVENT_IMAGESAVING_PROMTING = 0x0000024;
 

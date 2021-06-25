@@ -1,0 +1,23 @@
+{
+  "color":[
+    {
+      "name":"red",
+      "value":"#ff0000"
+    },
+    {
+      "name":"red_ref",
+      "value":"$color:red"
+    },
+    {
+      "name": "background_color",
+      "value": "#f3f3f4"
+    },
+    {
+      "name": "button_blue_color",
+      "value": "#007CFD"
+    },{
+      "name": "dialog_btn_gray_color",
+      "value": "#e6e6e6"
+    }
+  ]
+}
